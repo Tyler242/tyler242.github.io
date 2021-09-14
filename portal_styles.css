@@ -1,0 +1,46 @@
+html {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: cadetblue;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+header img {
+  float: right;
+}
+
+header h1 {
+  text-align: center;
+}
+
+main {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+main h2 {
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  border-bottom: 2px solid #c2c2c2;
+}
+
+main ul {
+  margin-top: 8px;
+}
+
+footer {
+  background-color: cadetblue;
+  margin-top: 30px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 15px;
+}
+
+footer p {
+  text-align: center;
+}
