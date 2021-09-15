@@ -1,6 +1,7 @@
 html {
   max-width: 750px;
   margin: 0 auto;
+  font-family: 'Urbanist', sans-serif;
 }
 
 header {
@@ -12,6 +13,8 @@ header {
 
 header img {
   float: right;
+  border-top-right-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 header h1 {
@@ -43,4 +46,10 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+footer .lastupdate {
+  color: rgb(94, 2, 2);
+  font-size: 0.9em;
+  margin-top: -8px;
 }

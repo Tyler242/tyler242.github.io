@@ -7,6 +7,9 @@
     <meta name="description" content="Course portal home for Tyler Shellman. Veiw assignments here.">
     <title>WDD 230 Tyler S</title>
     <link rel="stylesheet" href="portal_styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+    </style>
 </head>
 <body>
     <header>
@@ -22,8 +25,9 @@
         </ul>
     </main>
     <footer>
-        <p>&copy 2021 | Tyler Shellman | Oregon | Digital Content Publisher BYU-Idaho</p>
+        <p>&copy <span id="year"></span> | Tyler Shellman | Oregon | <a href="https://www.byui.edu/online" target="_blank">BYU-Idaho Online Learning</a></p>
+        <p class="lastupdate">Last Updated: <span id="lastmodify"></span></p>
     </footer>
-    
+    <script src="index.js"></script>
 </body>
 </html>
