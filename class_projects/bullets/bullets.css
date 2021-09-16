@@ -1,0 +1,16 @@
+main {
+  background-color: crimson;
+}
+
+li:nth-child(2n) {
+  color: blue;
+}
+
+li {
+  list-style: none;
+}
+li::before {
+  padding: 15px;
+  content: '•';
+  color: black;
+}
