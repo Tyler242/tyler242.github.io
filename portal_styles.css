@@ -55,3 +55,7 @@ footer .lastupdate {
   font-size: 0.9em;
   margin-top: -8px;
 }
+
+footer a {
+  color: black;
+}
