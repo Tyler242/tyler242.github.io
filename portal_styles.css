@@ -61,3 +61,19 @@ footer a:link,
 footer a:hover {
   color: black;
 }
+
+@media only screen and (max-width: 750px) {
+  html {
+    max-width: 750px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  header img {
+    float: none;
+  }
+  .img {
+    margin: auto;
+    width: 50%;
+  }
+}
