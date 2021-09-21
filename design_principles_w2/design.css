@@ -13,6 +13,16 @@ h1 {
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.proximity h2,
+.proximity h3,
+.alignment h2,
+.alignment h3,
+.repetition h2,
+.repetition h3 {
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
