@@ -25,6 +25,13 @@ h1 {
   text-align: center;
 }
 
+.img-P {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
 @media only screen and (max-width: 800px) {
   #container {
     display: grid;
