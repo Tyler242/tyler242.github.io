@@ -12,23 +12,51 @@ html {
   font-family: 'Be Vietnam Pro', sans-serif;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: var(--palecerulean);
+  background: linear-gradient(#95b8d1, #d6eadf);
+}
+
+header {
+  background-color: cadetblue;
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+header a:link,
+header a:visited {
+  color: black;
+}
+
+header a:hover {
+  color: lightgrey;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
 }
 
 h1 {
   text-align: center;
+  grid-column: 2/5;
 }
 
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .proximity,
 .alignment,
 .repetition {
+  border-radius: 10px;
+  box-shadow: 6px 3px 5px var(--bluegray);
   background-color: var(--middlebluegreen);
   margin: 10px 10px 10px 10px;
   width: 90%;
@@ -42,7 +70,7 @@ h1 {
   text-align: center;
   margin: 0 10px 10px 10px;
   padding: 5px 5px 5px 5px;
-  background-color: var(--honeydew);
+  /* background-color: var(--honeydew); */
 }
 
 .proximity h2,
@@ -61,6 +89,31 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   width: 50%;
+  border-radius: 6px;
+}
+
+footer a:visited,
+footer a:link,
+footer a:hover {
+  color: black;
+}
+
+footer {
+  background-color: cadetblue;
+  margin-top: px;
+  padding: 10px 10px 10px 10px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .lastupdate {
+  color: rgb(94, 2, 2);
+  font-size: 0.9em;
+  margin-top: -8px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -87,16 +140,16 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
+  header {
+    display: block;
+  }
   #container {
     display: block;
   }
-  .proximity {
-    width: 90%;
-  }
-  .alignment {
-    width: 90%;
-  }
+  .proximity,
+  .alignment,
   .repetition {
     width: 90%;
+    margin: auto;
   }
 }
