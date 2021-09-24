@@ -5,14 +5,13 @@
   --palecerulean: #95b8d1;
   --middlebluegreen: #b8e0d2;
   --honeydew: #d6eadf;
-  --queenpink: #eac4d5;
 }
 
 html {
   font-family: 'Be Vietnam Pro', sans-serif;
   max-width: 1400px;
   margin: 0 auto;
-  background: linear-gradient(#95b8d1, #d6eadf);
+  background: linear-gradient(var(--palecerulean), var(--honeydew));
 }
 
 header {
@@ -100,7 +99,6 @@ footer a:hover {
 
 footer {
   background-color: cadetblue;
-  margin-top: px;
   padding: 10px 10px 10px 10px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
