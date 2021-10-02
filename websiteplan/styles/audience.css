@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
+:root {
+  --background-color: #b3c5d7;
+  --text-color: #131b23;
+  --pop-box: #7392b7;
+}
+
 h1,
 h2,
 h3,
@@ -13,4 +19,74 @@ h6 {
 html {
   font-family: 'Nunito', sans-serif;
   font-weight: 1.5em;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+main {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#personas {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  justify-items: center;
+}
+
+.persona-1,
+.persona-2 {
+  background-color: var(--pop-box);
+  text-align: center;
+  padding: 0px 40px 0px 40px;
+  border-radius: 15px;
+}
+
+.persona-1 ul li,
+.persona-2 ul li {
+  list-style: none;
+}
+.persona-1 ul,
+.persona-2 ul {
+  padding-left: 0px;
+}
+
+.persona-1 {
+  grid-column: 2/3;
+}
+
+.persona-2 {
+  grid-column: 4/5;
+}
+
+@media only screen and (max-width: 960px) {
+  #personas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+  }
+  .persona-1 {
+    grid-column: 1/2;
+  }
+  .persona-2 {
+    grid-column: 2/3;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #personas {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .persona-1,
+  .persona-2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
 }
