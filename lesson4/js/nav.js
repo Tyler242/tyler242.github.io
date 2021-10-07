@@ -10,7 +10,6 @@ window.onresize = () => {
   let htmlElement = document.getElementsByTagName('html');
   let nav = document.querySelector('#nav');
   if (htmlElement[0].offsetWidth >= 760) {
-    console.log('Show');
     nav.style.display = 'flex';
   } else {
     nav.style.display = 'none';
