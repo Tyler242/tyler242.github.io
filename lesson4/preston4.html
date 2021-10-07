@@ -9,23 +9,32 @@
     <link rel="stylesheet" href="/normalize/normalize.css" />
     <link rel="stylesheet" href="/lesson4/css/header_footer.css" />
     <link rel="stylesheet" href="/lesson4/css/preston.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Preston, ID | Outside Yet?</title>
   </head>
   <body>
     <header>
-      <div>
+      <div class="heading">
         <img src="/lesson4/images/outsideyet_icon.png" alt="Outside Yet Logo" />
-        <h1>Outside Yet?</h1>
-        <p>motto/catch phrase</p>
+        <div>
+          <h1>Outside Yet?</h1>
+          <p>Discover the weather before going out</p>
+        </div>
       </div>
       <nav>
-        <ul>
-          <li>Home</li>
-          <li>Preston</li>
-          <li>Soda Springs</li>
-          <li>Fish Haven</li>
-          <li>Storm Center</li>
-          <li>Gallery</li>
+        <a href="javascript:void(0)" class="icon" onclick="navMenu()">
+          <span class="material-icons"> menu </span>
+        </a>
+        <ul id="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Preston</a></li>
+          <li><a href="#">Soda Springs</a></li>
+          <li><a href="#">Fish Haven</a></li>
+          <li><a href="#">Storm Center</a></li>
+          <li><a href="#">Gallery</a></li>
         </ul>
       </nav>
     </header>
