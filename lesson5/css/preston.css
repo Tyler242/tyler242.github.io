@@ -19,6 +19,7 @@ main {
 /* Hero Section */
 .hero-section {
   position: relative;
+  margin-bottom: 50px;
 }
 .hero-section aside {
   position: absolute;
@@ -27,8 +28,9 @@ main {
   width: 250px;
   border: 2px solid var(--text-color);
   background-color: var(--popout-box);
-  opacity: 0.7;
+  opacity: 0.9;
 }
+
 .hero-img {
   width: 100%;
 }
@@ -77,6 +79,7 @@ article {
   padding-bottom: 16px;
 }
 article img {
+  width: 30%;
   padding-top: 10px;
   float: right;
 }
@@ -104,6 +107,7 @@ article img {
     opacity: unset;
   }
   article img {
+    float: none;
     width: 100%;
   }
 }

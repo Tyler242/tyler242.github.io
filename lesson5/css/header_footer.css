@@ -130,9 +130,12 @@ footer {
   justify-self: start;
 }
 .img-container {
-  grid-column: 2/3;
+  grid-column: 2/4;
   grid-row: 1;
-  justify-self: end;
+  justify-self: center;
+}
+.img-container img {
+  width: 70%;
 }
 .social {
   list-style: none;
@@ -160,8 +163,11 @@ footer {
     margin: 0 auto;
   }
   .img-container {
-    max-width: fit-content;
+    max-width: 50%;
     margin: 0 auto;
+  }
+  .img-container img {
+    width: 100%;
   }
   .social {
     display: none;
@@ -171,7 +177,7 @@ footer {
 /* MOBILE SCREEN */
 @media only screen and (max-width: 400px) {
   .img-container img {
-    width: 90%;
+    width: 100%;
     margin-left: 10px;
   }
 }
