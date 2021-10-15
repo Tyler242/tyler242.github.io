@@ -20,6 +20,12 @@ html {
   font-weight: bolder;
 }
 
+/* NAV current class */
+.current {
+  background-color: var(--text-color2);
+  color: var(--hf-background) !important;
+}
+
 /* HEADER CSS */
 
 header {

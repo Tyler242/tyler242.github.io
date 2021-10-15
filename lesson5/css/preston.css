@@ -16,8 +16,17 @@ main {
   margin: 0 auto;
 }
 
+/* Emergency Banner */
+#eBanner {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: yellow;
+}
+
 /* Hero Section */
 .hero-section {
+  width: 100%;
   position: relative;
   margin-bottom: 50px;
 }
@@ -91,7 +100,7 @@ article img {
     margin: 0 auto;
   }
   .hero-section {
-    width: 90%;
+    width: 100%;
     display: block;
     position: unset;
   }
