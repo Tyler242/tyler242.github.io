@@ -39,6 +39,12 @@ main {
   background-color: var(--popout-box);
   opacity: 0.9;
 }
+.hero-section aside h4 {
+  padding-left: 10px;
+}
+.hero-section aside p {
+  padding-left: 10px;
+}
 
 .hero-img {
   width: 100%;
