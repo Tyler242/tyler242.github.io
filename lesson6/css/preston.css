@@ -1,9 +1,8 @@
-
-
 :root {
   --background-color: #b3c5d7;
   --popout-box: #7392b7;
   --text-color: #131b23;
+  --text-color2: #d8e1e9;
 }
 
 body {
@@ -57,7 +56,7 @@ main {
   border: 2px solid var(--text-color);
   border-radius: 5px;
 }
-.five-day h4 {
+.five-day h3 {
   padding-left: 30px;
 }
 .five-day hr {
@@ -83,6 +82,10 @@ main {
   font-size: 36px;
 }
 
+.five-day-temp {
+  padding: 10px 0 0 0;
+}
+
 /* Article Section */
 article {
   box-shadow: gray 2px 5px 10px;
@@ -97,6 +100,19 @@ article img {
   width: 26%;
   padding-top: 10px;
   float: right;
+}
+
+.button-link:visited,
+.button-link:link {
+  text-decoration: none;
+  background-color: var(--text-color2);
+  padding: 5px;
+  border: 1px gray solid;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+.button-link:hover {
+  background-color: #b4babe;
 }
 
 /* MEDIUM SCREENS */
@@ -132,4 +148,10 @@ article img {
   .five-day-img {
     display: none;
   }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }
