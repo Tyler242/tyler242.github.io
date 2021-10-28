@@ -74,7 +74,7 @@ main {
   overflow: hidden;
 }
 
-.img-2:hover {
+picture:hover {
   transform: scale(1.2);
   background-color: black;
   color: white;
