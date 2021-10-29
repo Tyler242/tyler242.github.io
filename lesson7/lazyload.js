@@ -3,7 +3,7 @@ const images = document.querySelectorAll('[data-src]');
 // Preload each image
 function preloadImage(img) {
   const src = img.getAttribute('data-src');
-  //   console.log(src);
+  img.removeAttribute('data-src');
   if (!src) {
     return;
   }
