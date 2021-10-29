@@ -2,7 +2,7 @@
 const figElements = document.getElementsByTagName('figure');
 const figArray = [...figElements];
 
-// Get all the child elements that are images.
+// place the alt text from each image into each p tag.
 figArray.forEach((element) => {
   element.children[1].innerHTML +=
     ' ' + element.children[0].getAttribute('alt');
