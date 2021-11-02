@@ -1,0 +1,56 @@
+/* Overall template styles */
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* table styles */
+table {
+  background-color: #b3bbbc;
+  margin: 0 auto;
+  width: 300px;
+  box-shadow: 10px 10px 10px #6c93ab;
+}
+
+/* thead styles */
+thead {
+  background-color: #7fb9c2;
+  font-size: 1.5em;
+}
+thead th {
+  padding: 5px 4px;
+}
+
+/* tbody styles */
+tbody th {
+  color: white;
+  background-color: #628ca6;
+  padding: 7px 0px;
+}
+tbody td {
+  padding: 7px 0px;
+  text-align: center;
+}
+#exceeded-goal {
+  background-color: #628ca6;
+  color: white;
+}
+tbody tr {
+  background-color: #e7f0ed;
+}
+tbody tr:nth-child(odd) {
+  background-color: #e7ffed;
+}
+
+/* tfoot styles */
+tfoot {
+  background-color: #7fb9c2;
+  text-align: center;
+  font-size: 0.85em;
+}
+tfoot td {
+  padding: 5px 0px;
+}
