@@ -19,7 +19,13 @@ window.onresize = () => {
 // Assuming that each page is built similarly, this should work the same on each page.
 
 // Get the html title element and html nav ul element.
-const currentPage = document.getElementsByTagName('title');
+let currentId = document.getElementsByTagName('title')[0].id;
+if (currentId.includes('-')) {
+  currentPage = currentId.split('-')[0] + ' ' + currentId.split('-')[1];
+  console.log(currentPage);
+} else {
+  currentPage = currentId;
+}
 const navUl = document.querySelector('#nav');
 
 // get the li elements inside the nav ul.
@@ -34,7 +40,7 @@ navLi.forEach((one) => {
 // iterate through the a tags until the innerHTML matches the id of the page.
 // Then apply the current class to the matching a tag.
 navAElements.forEach((el) => {
-  if (el.innerHTML == currentPage[0].id) {
+  if (el.innerHTML == currentPage) {
     el.className += ' current';
   }
 });
