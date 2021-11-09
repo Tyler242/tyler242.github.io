@@ -35,6 +35,9 @@ main {
 .town-cards section:hover {
   transform: scale(1.01);
 }
+.town-cards section img {
+  width: 100%;
+}
 .motto {
   padding-left: 10px;
   padding-right: 10px;
@@ -56,9 +59,21 @@ main {
   }
   .town-cards section {
     width: 75%;
-    margin-left: auto;
-    margin-right: auto;
     text-align: left;
+    padding: 2%;
+    margin: 10px auto;
+  }
+
+  .town-cards .t-one img,
+  .town-cards .t-three img {
+    width: 60%;
+    float: right;
+  }
+
+  .town-cards .t-two img {
+    width: 60%;
+    float: left;
+    padding-right: 10px;
   }
 }
 
@@ -69,9 +84,16 @@ main {
   }
   .town-cards section {
     text-align: center;
+    padding: 0px;
   }
   .town-cards section:hover {
     transform: none;
+  }
+  .town-cards .t-one img,
+  .town-cards .t-two img,
+  .town-cards .t-three img {
+    float: none;
+    width: 70%;
   }
   .slider-control-next img,
   .slider-control-prev img {
@@ -144,4 +166,10 @@ main {
   .slider-item.next-item.slide-end {
     transform: translateX(0);
   }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }

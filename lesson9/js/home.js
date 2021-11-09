@@ -27,8 +27,6 @@ fetch(url)
     // Create the new elements
     let i = 0;
     townsArray.forEach((item) => {
-      //   let imgElem = document.createElement('img');
-      //   imgElem.setAttribute('src', item.photo);
 
       let h3Elem = document.createElement('h3');
       h3Elem.textContent = item.name;
@@ -49,7 +47,6 @@ fetch(url)
       rainElem.setAttribute('class', 'info');
       rainElem.textContent = 'Average Rainfall: ' + item.averageRainfall;
 
-      //   listSections[i].appendChild(imgElem);
       listSections[i].appendChild(h3Elem);
       listSections[i].appendChild(mottoElem);
       listSections[i].appendChild(yearElem);
