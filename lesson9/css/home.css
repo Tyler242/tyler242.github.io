@@ -73,6 +73,10 @@ main {
   .town-cards section:hover {
     transform: none;
   }
+  .slider-control-next img,
+  .slider-control-prev img {
+    width: 30px;
+  }
 
   /* This is for the carousel and was taken from:
   https://engineertodeveloper.com/create-a-carousel-with-vanilla-javascript/ */
