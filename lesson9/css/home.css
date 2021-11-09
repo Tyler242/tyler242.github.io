@@ -22,7 +22,7 @@ main {
   justify-content: space-evenly;
   text-align: center;
 }
-.town-cards a {
+.town-cards section {
   width: 30%;
   background-color: var(--popout-box);
   box-shadow: 5px 5px 10px var(--text-color);
@@ -32,7 +32,7 @@ main {
   text-decoration: none;
   color: var(--text-color);
 }
-.town-cards a:hover {
+.town-cards section:hover {
   transform: scale(1.01);
 }
 .motto {
@@ -49,18 +49,13 @@ main {
   .town-cards {
     display: block;
   }
-  .town-cards a {
-    background-color: var(--popout-box);
-    box-shadow: 5px 5px 10px var(--text-color);
+  .town-cards section {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
-  .town-cards a:visited,
-  .town-cards a:link {
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--popout-box);
-    box-shadow: 5px 5px 10px var(--text-color);
-  }
-  .town-cards a:hover {
-    transform: scale(1.01);
-  }
+}
+
+@media screen and (max-width: 375px) {
 }

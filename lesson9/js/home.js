@@ -55,7 +55,7 @@ fetch(url)
       listSections[i].appendChild(yearElem);
       listSections[i].appendChild(popElem);
       listSections[i].appendChild(rainElem);
-
+      
       i++;
     });
   });
