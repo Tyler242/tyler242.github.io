@@ -66,6 +66,9 @@ main {
   .town-cards section {
     text-align: center;
   }
+  .town-cards section:hover {
+    transform: none;
+  }
 
   /* This is for the carousel and was taken from:
   https://engineertodeveloper.com/create-a-carousel-with-vanilla-javascript/ */
@@ -88,9 +91,6 @@ main {
   .slider .slider-item.next-item {
     display: block;
   }
-  .town-cards section:hover {
-    transform: none;
-  }
   .slider-control-prev,
   .slider-control-next {
     display: inline;
@@ -107,7 +107,8 @@ main {
     left: 20px;
   }
 
-  .slider-control-prev:hover {
+  .slider-control-prev:hover,
+  .slider-control-next:hover {
     opacity: 1;
   }
 
