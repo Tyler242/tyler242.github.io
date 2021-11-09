@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JavaScript Files -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      defer
+    ></script>
+    <script src="/global_JS_weather/nav.js" defer></script>
+    <script src="/global_JS_weather/webfontload.js" defer></script>
+    <script src="/global_JS_weather/date.js" defer></script>
+    <script src="/lesson9/js/home.js" defer></script>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/normalize/normalize.css" />
+    <link rel="stylesheet" href="/lesson7/css/header_footer.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/lesson9/css/home.css" />
+    <title id="Home">Home | Outside Yet?</title>
+  </head>
+  <body>
+    <header>
+      <div class="heading">
+        <img src="/lesson6/images/outsideyet_icon.png" alt="Outside Yet Logo" />
+        <div>
+          <h1>Outside Yet?</h1>
+          <p>Discover the weather before going out</p>
+        </div>
+      </div>
+      <nav>
+        <a href="javascript:void(0)" class="icon" onclick="navMenu()">
+          <span class="material-icons"> menu </span>
+        </a>
+        <ul id="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="/lesson6/preston6.html">Preston</a></li>
+          <li><a href="#">Soda Springs</a></li>
+          <li><a href="#">Fish Haven</a></li>
+          <li><a href="/lesson8/stormcenter.html">Storm Center</a></li>
+          <li><a href="/lesson7/gallery-7.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="town-cards">
+        <a href="/lesson6/preston6.html" class="t-one"></a>
+        <a href="#" class="t-two"></a>
+        <a href="#" class="t-three"></a>
+      </div>
+    </main>
+    <footer>
+      <section class="contact-info">
+        <h3>Contact Information</h3>
+        <ul class="contact">
+          <li>Address</li>
+          <li>Email</li>
+          <li>Phone</li>
+        </ul>
+        <ul class="social">
+          <li>
+            <a href="#"
+              ><img src="/lesson6/images/twitter.png" alt="Twitter icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/lesson6/images/youtube.png" alt="Youtube icon"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/lesson6/images/facebook.png" alt="Facebook icon"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <div class="img-container">
+        <img
+          src="/lesson6/images/prestonIdahoMap.png"
+          alt="Map of Preston Idaho"
+        />
+      </div>
+      <div id="date">
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>

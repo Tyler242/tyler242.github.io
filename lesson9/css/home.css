@@ -1,0 +1,66 @@
+:root {
+  --background-color: #b3c5d7;
+  --popout-box: #7392b7;
+  --text-color: #131b23;
+  --text-color2: #d8e1e9;
+}
+
+/* Main set up of the content */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+/* main content */
+.town-cards {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.town-cards a {
+  width: 30%;
+  background-color: var(--popout-box);
+  box-shadow: 5px 5px 10px var(--text-color);
+}
+.town-cards a:visited,
+.town-cards a:link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.town-cards a:hover {
+  transform: scale(1.01);
+}
+.motto {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.info {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .town-cards {
+    display: block;
+  }
+  .town-cards a {
+    background-color: var(--popout-box);
+    box-shadow: 5px 5px 10px var(--text-color);
+  }
+  .town-cards a:visited,
+  .town-cards a:link {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--popout-box);
+    box-shadow: 5px 5px 10px var(--text-color);
+  }
+  .town-cards a:hover {
+    transform: scale(1.01);
+  }
+}
