@@ -1,5 +1,5 @@
 const apiURL =
-  'http://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=744fe90a723fbf1d7ad8053159c6a1d5';
+  'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&appid=744fe90a723fbf1d7ad8053159c6a1d5';
 
 const dofW = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
