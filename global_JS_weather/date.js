@@ -25,7 +25,7 @@ let months = [
   'December',
 ];
 
-document.querySelector('#date').textContent =
+document.querySelector('#date-p').textContent =
   daysInWeek[date.getDay()] +
   ', ' +
   String(date.getDate()) +
