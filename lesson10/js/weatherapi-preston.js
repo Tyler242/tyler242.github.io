@@ -13,11 +13,16 @@ fetch(apiURL)
   })
   .then((jsObject) => {
     let weatherData = jsObject.list[0];
+
     document.getElementById('current').textContent =
       weatherData.weather[0].main;
     document.getElementById('temp').textContent = weatherData.main.temp_max;
     document.getElementById('humidity').textContent = weatherData.main.humidity;
     document.getElementById('windSpeed').textContent = weatherData.wind.speed;
+    document.getElementById('windChill').textContent = computeWindChill(
+      weatherData.main.temp,
+      weatherData.wind.speed
+    );
 
     let forecast = jsObject.list;
     const size = forecast.length;
@@ -54,3 +59,16 @@ fetch(apiURL)
       }
     }
   });
+
+function computeWindChill(cTemp, wSpeed) {
+  if (cTemp <= 50 && wSpeed >= 3) {
+    const wTemp =
+      35.74 +
+      0.6215 * cTemp -
+      35.75 * Math.pow(wSpeed, 0.16) +
+      0.4275 * cTemp * Math.pow(wSpeed, 0.16);
+    return wTemp.toFixed(1);
+  } else {
+    return 'NaN';
+  }
+}
