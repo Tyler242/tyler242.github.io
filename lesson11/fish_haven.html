@@ -6,33 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Discover the forecast for Preston Idaho"
+      content="Discover the forecast for Fish Haven, Idaho"
     />
-    <!-- Java Script -->
-    <script src="/global_JS_weather/date.js" defer></script>
-    <script src="/global_JS_weather/nav.js" defer></script>
-    <script src="/lesson10/js/preston.js" defer></script>
-    <script src="/lesson10/js/weatherapi-preston.js" defer></script>
+    <!-- JS scripts -->
+    <script src="/lesson11/js/date.js" defer></script>
+    <script src="/lesson11/js/nav.js" defer></script>
+    <script src="/lesson11/js/events.js" defer></script>
+    <script src="/lesson11/js/weatherApi.js" defer></script>
     <script
       src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
       defer
     ></script>
-    <script src="/global_JS_weather/webfontload.js" defer></script>
+    <script src="/lesson11/js/webfontload.js" defer></script>
     <!-- CSS links -->
     <link rel="stylesheet" type="text/css" href="/normalize/normalize.css" />
-    <link rel="stylesheet" href="/lesson6/css/header_footer.css" />
+    <link rel="stylesheet" href="/lesson11/css/header_footer.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/lesson6/css/preston.css" />
-    <title id="Preston">Preston, ID | Outside Yet?</title>
+    <link rel="stylesheet" href="/lesson11/css/towns/town-template.css" />
+    <link rel="stylesheet" href="/lesson11/css/towns/hero-section.css" />
+    <link rel="stylesheet" href="/lesson11/css/towns/five-day-forecast.css" />
+    <link rel="stylesheet" href="/lesson11/css/towns/article.css" />
+    <link rel="stylesheet" href="/lesson11/css/towns/events.css" />
+    <title id="Fish-Haven">Fish Haven, ID | Outside Yet?</title>
   </head>
   <body>
-    <div id="eBanner">
-      Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city
-      park pavilion.
-    </div>
     <header>
       <div class="heading">
         <img src="/lesson6/images/outsideyet_icon.png" alt="Outside Yet Logo" />
@@ -46,17 +46,17 @@
           <span class="material-icons"> menu </span>
         </a>
         <ul id="nav">
-          <li><a href="/lesson9/home.html">Home</a></li>
-          <li><a href="#">Preston</a></li>
-          <li><a href="#">Soda Springs</a></li>
+          <li><a href="/lesson11/home.html">Home</a></li>
+          <li><a href="/lesson11/preston.html">Preston</a></li>
+          <li><a href="/lesson11/soda_springs.html">Soda Springs</a></li>
           <li><a href="#">Fish Haven</a></li>
-          <li><a href="/lesson8/stormcenter.html">Storm Center</a></li>
-          <li><a href="/lesson7/gallery-7.html">Gallery</a></li>
+          <li><a href="/lesson11/stormcenter.html">Storm Center</a></li>
+          <li><a href="/lesson11/gallery-7.html">Gallery</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Preston Idaho</h2>
+      <h2>Fish Haven</h2>
       <div class="hero-section">
         <picture>
           <source
@@ -138,6 +138,10 @@
           >Discover What's Happening</a
         >
       </article>
+      <section id="events">
+        <h3>Upcoming Events:</h3>
+        <div id="events-list"></div>
+      </section>
     </main>
     <footer>
       <section class="contact-info">
