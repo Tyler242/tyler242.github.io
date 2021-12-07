@@ -1,9 +1,8 @@
 // Get the coin name from the url and format it to call the api
 const queryString = window.location.search.split('=')[1].toLowerCase();
-const coinName = queryString;
 
 // The formatted and completed apiUrl
-const apiUrl = 'https://api.coinstats.app/public/v1/coins/' + coinName;
+const apiUrl = 'https://api.coinstats.app/public/v1/coins/' + queryString;
 // console.log(apiUrl);
 getApiData(apiUrl);
 
@@ -51,22 +50,34 @@ function generatePage(coinInfo) {
   ];
   let addDataWidget = createAddDataWidget(coinInfo.name, addData);
   divElem.appendChild(addDataWidget);
+
+  // Create the additional links widget
+  let linksWidget = createLinksWidget(
+    coinInfo.name,
+    coinInfo.exp,
+    coinInfo.websiteUrl,
+    coinInfo.twitterUrl
+  );
+  divElem.appendChild(linksWidget);
 }
 
 function createHeadWidget(name, icon, symbol) {
   // parent element
   let section = document.createElement('section');
+  section.id = 'head';
+
+  // img element
+  let div = document.createElement('div');
+  let imgElem = document.createElement('img');
+  imgElem.src = icon;
+  imgElem.alt = name + ' icon';
+  div.appendChild(imgElem);
+  section.appendChild(div);
 
   // header element
   let h2Elem = document.createElement('h2');
   h2Elem.textContent = name;
   section.appendChild(h2Elem);
-
-  // img element
-  let imgElem = document.createElement('img');
-  imgElem.src = icon;
-  imgElem.alt = name + 'icon';
-  section.appendChild(imgElem);
 
   // symbol
   let symElem = document.createElement('p');
@@ -79,6 +90,7 @@ function createHeadWidget(name, icon, symbol) {
 function createDataWidget(name, data) {
   // parent element
   let section = document.createElement('section');
+  section.id = 'data';
 
   // header element
   let h2Elem = document.createElement('h2');
@@ -95,22 +107,22 @@ function createDataWidget(name, data) {
   // price compared to bitcoin
   let pToBTC = document.createElement('p');
   pToBTC.textContent =
-    'Price Compared to Bitcoin (Price/Bitcoin): $' + data[1].toFixed(4);
+    'Compared to Bitcoin (Price/Bitcoin): $' + data[1].toFixed(4);
   section.appendChild(pToBTC);
 
   // change over last hour
   let pChange1h = document.createElement('p');
-  pChange1h.textContent = 'Price Change Last Hour: $' + data[3];
+  pChange1h.textContent = 'Change Last Hour: $' + data[3];
   section.appendChild(pChange1h);
 
   // change over last day
   let pChange1d = document.createElement('p');
-  pChange1d.textContent = 'Price Change Last Day: $' + data[2];
+  pChange1d.textContent = 'Change Last Day: $' + data[2];
   section.appendChild(pChange1d);
 
   // change over last week
   let pChange1w = document.createElement('p');
-  pChange1w.textContent = 'Price Change Last Week: $' + data[4];
+  pChange1w.textContent = 'Change Last Week: $' + data[4];
   section.appendChild(pChange1w);
 
   return section;
@@ -119,11 +131,74 @@ function createDataWidget(name, data) {
 function createAddDataWidget(name, data) {
   // parent element
   let section = document.createElement('section');
+  section.id = 'addData';
 
   // header element
   let h2Elem = document.createElement('h2');
   h2Elem.textContent = name + ' Additional Data';
   section.appendChild(h2Elem);
 
+  // rank
+  let rank = document.createElement('p');
+  rank.id = 'rank';
+  rank.textContent = 'Rank in Top 10: ' + data[2];
+  section.appendChild(rank);
+
+  // available supply
+  let supplyElem = document.createElement('p');
+  supplyElem.textContent = 'Available Supply: ' + data[0];
+  section.appendChild(supplyElem);
+
+  // market cap
+  let marketCap = document.createElement('p');
+  marketCap.textContent = 'Market Cap: ' + data[1];
+  section.appendChild(marketCap);
+
+  // volume
+  let volume = document.createElement('p');
+  volume.textContent = 'Volume: ' + data[3];
+  section.appendChild(volume);
+
   return section;
+}
+
+function createLinksWidget(name, listLinks, webUrl, twitterUrl) {
+  // parent element
+  let section = document.createElement('section');
+  section.id = 'links';
+
+  // header element
+  let h2 = document.createElement('h2');
+  h2.textContent = 'Useful Links:';
+  section.appendChild(h2);
+
+  // website URL
+  let webUrlElem = document.createElement('a');
+  webUrl.class = 'useful-link';
+  webUrlElem.href = webUrl;
+  webUrlElem.textContent = name + ' Website';
+  section.appendChild(webUrlElem);
+
+  // twitter URL
+  let twitterUrlElem = document.createElement('a');
+  twitterUrlElem.class = 'useful-link';
+  twitterUrlElem.href = twitterUrl;
+  twitterUrlElem.textContent = name + ' Twitter';
+  section.appendChild(twitterUrlElem);
+
+  // other useful links
+  listLinks.forEach((link) => {
+    let a = document.createElement('a');
+    a.class = 'useful-link';
+    a.href = link;
+    a.textContent = textFromUrl(link);
+    section.appendChild(a);
+  });
+
+  return section;
+}
+
+function textFromUrl(url) {
+  let addr = new URL(url);
+  return addr.host;
 }
