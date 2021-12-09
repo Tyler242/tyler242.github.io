@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- JS links -->
     <script src="/final/js/crypto.js" defer></script>
+    <script src="/final/js/nav.js" defer></script>
+    <script src="/final/js/apiData.js"></script>
     <!-- CSS links -->
     <link rel="stylesheet" href="/normalize/normalize.css" />
+    <link rel="stylesheet" href="/final/scss/header-scss/styles.css" />
+    <link rel="stylesheet" href="/final/scss/crypto-links-scss/styles.css" />
     <link rel="stylesheet" href="/final/scss/crypto-scss/styles.css" />
     <title>BI | Best Info For Crypto</title>
   </head>
@@ -21,9 +25,19 @@
       </div>
     </header>
     <nav id="nav">
-      <a href="/final/index.html">Home</a>
+      <a href="javascript:void(0)" class="icon" onclick="navMenu()">
+        <span class="material-icons"> menu </span>
+      </a>
+      <ul id="nav-ul">
+        <a href="/final/index.html">Home</a>
+        <a href="/final/crypto-intro.html">Learn About Crypto</a>
+        <a href="/final/news.html">News</a>
+        <a href="/final/get-involved.html">Get Involved</a>
+      </ul>
     </nav>
-    <main id="main"></main>
+    <main id="main">
+      <section id="crypto-links"></section>
+    </main>
     <footer></footer>
   </body>
 </html>
