@@ -8,6 +8,11 @@
       name="description"
       content="Want to learn what cryptocurrency is and how it works?"
     />
+    <!-- JS Files -->
+    <script src="/final/js/nav.js" defer></script>
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/normalize/normalize.css" />
+    <link rel="stylesheet" href="/final/scss/header-scss/styles.css" />
     <title>What is Crypto? | BI</title>
   </head>
   <body>
@@ -20,7 +25,15 @@
       </div>
     </header>
     <nav id="nav">
-      <a href="/final/index.html">Home</a>
+      <a href="javascript:void(0)" class="icon" onclick="navMenu()">
+        <span class="material-icons"> menu </span>
+      </a>
+      <ul id="nav-ul">
+        <a href="/final/index.html">Home</a>
+        <a href="/final/crypto-intro.html">Learn About Crypto</a>
+        <a href="/final/news.html">News</a>
+        <a href="/final/get-involved.html">Get Involved</a>
+      </ul>
     </nav>
     <main>
       <section>
