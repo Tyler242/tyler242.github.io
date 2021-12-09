@@ -20,6 +20,7 @@ function generatePage(coinInfo) {
 
   // create a div element
   let divElem = document.createElement('div');
+  divElem.id = 'main-container';
   mainElem.appendChild(divElem);
 
   // Create the intro widget
@@ -65,6 +66,8 @@ function createHeadWidget(name, icon, symbol) {
   // parent element
   let section = document.createElement('section');
   section.id = 'head';
+  let divElem = document.createElement('div');
+  divElem.id = 'container';
 
   // img element
   let div = document.createElement('div');
@@ -72,17 +75,18 @@ function createHeadWidget(name, icon, symbol) {
   imgElem.src = icon;
   imgElem.alt = name + ' icon';
   div.appendChild(imgElem);
-  section.appendChild(div);
+  divElem.appendChild(div);
 
   // header element
   let h2Elem = document.createElement('h2');
   h2Elem.textContent = name;
-  section.appendChild(h2Elem);
+  divElem.appendChild(h2Elem);
 
   // symbol
   let symElem = document.createElement('p');
   symElem.textContent = 'Symbol: ' + symbol;
-  section.appendChild(symElem);
+  divElem.appendChild(symElem);
+  section.appendChild(divElem);
 
   return section;
 }
@@ -94,7 +98,7 @@ function createDataWidget(name, data) {
 
   // header element
   let h2Elem = document.createElement('h2');
-  h2Elem.textContent = name + ' Financial Data';
+  h2Elem.textContent = 'Financial Data';
   section.appendChild(h2Elem);
 
   // format the data
@@ -135,7 +139,7 @@ function createAddDataWidget(name, data) {
 
   // header element
   let h2Elem = document.createElement('h2');
-  h2Elem.textContent = name + ' Additional Data';
+  h2Elem.textContent = 'Additional Data';
   section.appendChild(h2Elem);
 
   // rank
@@ -187,13 +191,16 @@ function createLinksWidget(name, listLinks, webUrl, twitterUrl) {
   section.appendChild(twitterUrlElem);
 
   // other useful links
+  urlDiv = document.createElement('div');
+  urlDiv.id = 'url-div';
   listLinks.forEach((link) => {
     let a = document.createElement('a');
     a.class = 'useful-link';
     a.href = link;
     a.textContent = textFromUrl(link);
-    section.appendChild(a);
+    urlDiv.appendChild(a);
   });
+  section.appendChild(urlDiv);
 
   return section;
 }
