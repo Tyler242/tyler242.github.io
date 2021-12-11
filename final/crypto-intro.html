@@ -13,6 +13,7 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="/normalize/normalize.css" />
     <link rel="stylesheet" href="/final/scss/header-scss/styles.css" />
+    <link rel="stylesheet" href="/final/scss/crypto-intro-scss/styles.css" />
     <title>What is Crypto? | BI</title>
   </head>
   <body>
@@ -36,7 +37,21 @@
       </ul>
     </nav>
     <main>
-      <section>
+      <section class="crypto-info">
+        <picture>
+          <source
+            media="(max-width:680px)"
+            srcset="/final/images/cryptocurrency-6601591_640.jpg"
+          />
+          <source
+            media="(min-width: 681px)"
+            srcset="/final/images/cryptocurrency-6601591_1280.jpg"
+          />
+          <img
+            src="/final/images/cryptocurrency-6601591_1280.jpg"
+            alt="Globe made of dollar signs and coins with the bitcoin symbol"
+          />
+        </picture>
         <h2>What is a Cryptocurrency? (Wikipedia)</h2>
         <p>
           A cryptocurrency, crypto-currency, or crypto is a collection of binary
@@ -65,7 +80,25 @@
           >Read the Full Article</a
         >
       </section>
-      <section>
+      <section class="blockchain-info">
+        <picture>
+          <source
+            media="(max-width:680px)"
+            srcset="/final/images/network-3537389_640.jpg"
+          />
+          <source
+            media="(max-width: 1280px)"
+            srcset="/final/images/network-3537389_1280.jpg"
+          />
+          <source
+            media="(max-width: 1920px)"
+            srcset="/final/images/network-3537389_1920.jpg"
+          />
+          <img
+            src="/final/images/network-3537389_1280.jpg"
+            alt="Globe made of dollar signs and coins with the bitcoin symbol"
+          />
+        </picture>
         <h2>What is Blockchain Technology? (Wikipedia)</h2>
         <p>
           A blockchain is a growing list of records, called blocks, that are
@@ -90,13 +123,10 @@
           >Read the Full Article</a
         >
       </section>
-      <div>
-        <a href="#"
-          ><h2>Get Involved</h2>
-          <p>testing</p></a
-        >
-      </div>
+      <section>
+        <h2>Additional Information</h2>
+      </section>
     </main>
-    <footer></footer>
+    <footer>This is the footer</footer>
   </body>
 </html>
