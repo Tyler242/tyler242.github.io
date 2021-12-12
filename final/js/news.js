@@ -19,7 +19,6 @@ buttonList.forEach((button) => {
 });
 
 function populateNews(news) {
-  console.log(news);
   // Get the news section
   computeDisplayGrid();
   let i = 0;
@@ -49,8 +48,10 @@ function populateNews(news) {
 function computeDisplayGrid() {
   let newsDisplay = document.querySelector('#news');
   let htmlElem = document.getElementsByTagName('html');
-  if (htmlElem[0].offsetWidth >= 768) {
+  if (htmlElem[0].offsetWidth >= 768 && htmlElem[0].offsetWidth < 1024) {
     newsDisplay.style.display = 'flex';
+  } else if (htmlElem[0].offsetWidth >= 1024) {
+    newsDisplay.style.display = 'grid';
   } else {
     newsDisplay.style.display = 'block';
   }

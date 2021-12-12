@@ -3,7 +3,6 @@ const queryString = window.location.search.split('=')[1].toLowerCase();
 
 // The formatted and completed apiUrl
 const apiUrl = 'https://api.coinstats.app/public/v1/coins/' + queryString;
-// console.log(apiUrl);
 getApiData(apiUrl);
 
 async function getApiData(url) {
@@ -15,7 +14,6 @@ async function getApiData(url) {
 }
 
 function generatePage(coinInfo) {
-  console.log(coinInfo);
   const mainElem = document.querySelector('#main');
 
   // create a div element

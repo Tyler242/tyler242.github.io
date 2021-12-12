@@ -52,8 +52,7 @@ function createScroll(data) {
 function formatText(data) {
   let string = '';
   data.forEach((item) => {
-    string += item.name + ': $' + item.price.toFixed(2) + '; ';
+    string += item.name + ': $' + item.price.toFixed(2) + ' --- ';
   });
-  console.log(string);
   return string;
 }
