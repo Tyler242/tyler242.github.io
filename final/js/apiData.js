@@ -3,6 +3,7 @@ const url = 'https://api.coinstats.app/public/v1/coins?skip=0&limit=10';
 async function getApiData(url) {
   let response = await fetch(url);
   let data = await response.json();
+  createScroll(data.coins);
   createLinks(data.coins);
 }
 
@@ -41,4 +42,18 @@ function createLI(name, symbol, id, ulElem) {
   liElem.appendChild(formElem);
   // add the list element to the unordered list
   ulElem.appendChild(liElem);
+}
+
+function createScroll(data) {
+  let scrollTag = document.getElementsByTagName('marquee')[0];
+  scrollTag.innerHTML = formatText(data);
+}
+
+function formatText(data) {
+  let string = '';
+  data.forEach((item) => {
+    string += item.name + ': $' + item.price.toFixed(2) + '; ';
+  });
+  console.log(string);
+  return string;
 }

@@ -24,13 +24,24 @@ function populateNews(news) {
   computeDisplayGrid();
   let i = 0;
   news.forEach((listing) => {
+    // Do not display any news articles from Reddit as the content is sometimes
+    // innapropriate and is not in a readable format.
+    if (
+      (listing.source.split(' ')[0] == 'Reddit') |
+      (listing.source.split(' ')[1] == 'Twitter')
+    ) {
+      document.getElementsByClassName('news-article')[i].style.display = 'none';
+    } else {
+      document.getElementsByClassName('news-article')[i].style.display =
+        'block';
+    }
     // update each news section
     document.querySelectorAll('.title')[i].textContent = listing.title;
     document.querySelectorAll('.source')[i].textContent = listing.source;
     document.querySelectorAll('.description')[i].textContent =
       listing.description;
     document.querySelectorAll('.link')[i].href = listing.link;
-    document.querySelectorAll('.icon')[i].src = listing.imgURL;
+    document.querySelectorAll('.news-icon')[i].src = listing.imgURL;
     i++;
   });
 }

@@ -35,7 +35,7 @@ header div img {
 }
 
 nav {
-  background-color: #280003;
+  background-color: #33444e;
 }
 
 nav .icon {
@@ -48,22 +48,46 @@ nav #nav-ul {
   display: none;
   text-align: center;
   list-style-type: none;
+  margin-bottom: 5px;
 }
 
 nav #nav-ul a:visited,
 nav #nav-ul a:link {
+  font-weight: bold;
   display: block;
   padding: 5px 10px;
   max-width: 150px;
   margin: 5px auto;
-  background-color: lightcyan;
+  background-color: #3ecaa8;
   text-decoration: none;
   color: black;
 }
 
 nav #nav-ul a:hover {
   background-color: black;
-  color: lightcyan;
+  color: #3ecaa8;
+}
+
+footer {
+  background-color: #33444e;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 10px 5px 10px 5px;
+  margin: 50px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul a:link,
+footer ul a:visited {
+  color: mediumspringgreen;
 }
 
 @media screen and (min-width: 900px) {
